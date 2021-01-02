@@ -4,7 +4,7 @@ The 23 Gang of Four design patterns, defined in the book "Design Patterns: Eleme
 
 ("Design Patterns : Elements of Reusable Object-Oriented Software"책에 정의 된 23 Gang of Four 디자인 패턴.)
 
-## Behavioral
+## Behavioral(행위 패턴)
 
 **1. Chain of Responsibility(책임 연쇄 패턴)**
 
@@ -72,23 +72,37 @@ Defines a family of algorithms, encapsulates each one, and make them interchange
 
 (알고리즘 제품군을 정의하고 각 알고리즘을 캡슐화 한 다음 상호 교환 가능하게 만듭니다. 전략을 사용하면 알고리즘이이를 사용하는 클라이언트와 독립적으로 달라질 수 있습니다.)
 
-**10. Template Method**
+**10. Template Method(템플릿 메소드 패턴)**
 
 Define a skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithms structure.
 
-**11. Visitor**
+작업에서 알고리즘의 골격을 정의하여 일부 단계를 하위 클래스로 연기합니다. 템플릿 메서드를 사용하면 하위 클래스가 알고리즘 구조를 변경하지 않고도 알고리즘의 특정 단계를 재정의 할 수 있습니다.
+
+>[wiki]
+>템플릿 메소드 패턴은 소프트웨어 공학에서 동작 상의 알고리즘의 프로그램 뼈대를 정의하는 행위 디자인 패턴이다. 알고리즘의 구조를 변경하지 않고 알고리즘의 특정 단계들을 다시 정의할 수 있게 해준다. 
+
+**11. Visitor(비지터 패턴)**
 
 Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
 
-## Creational
+(개체 구조의 요소에 대해 수행 할 작업을 나타냅니다. 방문자를 사용하면 작동하는 요소의 클래스를 변경하지 않고 새 작업을 정의 할 수 있습니다.)
 
-**12. Abstract Factory**
+>[wiki]
+>객체 지향 프로그래밍과 소프트웨어 공학에서 비지터 패턴은 알고리즘을 객체 구조에서 분리시키는 디자인 패턴이다. 이렇게 분리를 하면 구조를 수정하지 않고도 실질적으로 새로운 동작을 기존의 객체 구조에 추가할 수 있게 된다. 개방-폐쇄 원칙을 적용하는 방법의 하나이다.
+
+## Creational(생성 패턴)
+
+**12. Abstract Factory(추상팩토리패턴)**
 
 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
 
-**13. Builder**
+(구체적인 클래스를 지정하지 않고 관련되거나 종속 된 개체의 패밀리를 만들기위한 인터페이스를 제공합니다.)
+
+**13. Builder(빌더패턴)**
 
 Separate the construction of a complex object from its representation so that the same construction processes can create different representations.
+
+(복잡한 객체의 구성을 표현에서 분리하여 동일한 구성 프로세스가 다른 표현을 만들 수 있도록합니다.)
 
 **14. Factory Method**
 
