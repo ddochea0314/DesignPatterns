@@ -2,43 +2,75 @@
 
 The 23 Gang of Four design patterns, defined in the book "Design Patterns: Elements of Reusable Object-Oriented Software".
 
+("Design Patterns : Elements of Reusable Object-Oriented Software"책에 정의 된 23 Gang of Four 디자인 패턴.)
+
 ## Behavioral
 
-**1. Chain of Responsibility**
+**1. Chain of Responsibility(책임 연쇄 패턴)**
 
 Avoid coupling the sender of a request to its receiver by giving more then one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.
 
-**2. Command**
+(하나 이상의 객체에 요청을 처리 할 수있는 기회를 제공하여 요청 발신자와 수신자를 연결하지 마십시오. 수신 객체를 연결하고 객체가 처리 할 때까지 체인을 따라 요청을 전달합니다.)
+
+>[wiki]
+>객체 지향 디자인에서 chain-of-responsibility pattern은 명령 객체와 일련의 처리 객체를 포함하는 디자인 패턴이다. 각각의 처리 객체는 명령 객체를 처리할 수 있는 연산의 집합이고, 체인 안의 처리 객체가 핸들할 수 없는 명령은 다음 처리 객체로 넘겨진다. 이 작동방식은 새로운 처리 객체부터 체인의 끝까지 다시 반복된다.
+
+**2. Command(커맨드 패턴)**
 
 Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.
 
-**3. Interpreter**
+(요청을 객체로 캡슐화하여 다른 요청, 큐 또는 로그 요청으로 클라이언트를 매개 변수화하고 실행 취소 가능한 작업을 지원할 수 있습니다.)
+
+>[wiki]
+>커맨드 패턴(Command pattern)이란 요청을 객체의 형태로 캡슐화하여 사용자가 보낸 요청을 나중에 이용할 수 있도록 매서드 이름, 매개변수 등 요청에 필요한 정보를 저장 또는 로깅, 취소할 수 있게 하는 패턴이다.
+
+**3. Interpreter(인터프리터)**
 
 Given a language, define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
 
-**4. Iterator**
+(언어가 주어지면 해당 표현을 사용하여 언어로 문장을 해석하는 인터프리터와 함께 문법 표현을 정의합니다.)
+
+**4. Iterator(반복자패턴)**
 
 Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
 
-**5. Mediator**
+(기본 표현을 노출하지 않고 집계 개체의 요소에 순차적으로 액세스하는 방법을 제공합니다.)
+
+**5. Mediator(중재자패턴)**
 
 Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and lets you vary their interaction independently.
 
-**6. Memento**
+(개체 집합이 상호 작용하는 방식을 캡슐화하는 개체를 정의합니다. 중재자는 객체가 서로를 명시 적으로 참조하지 못하도록하여 느슨한 결합을 촉진하고 상호 작용을 독립적으로 변경할 수 있도록합니다.)
+
+**6. Memento(메멘토패턴)**
 
 Without violating encapsulation, capture and externalize an objects internal state so that the object can be restored to this state later.
 
-**7. Observer**
+(캡슐화를 위반하지 않고 나중에 개체를이 상태로 복원 할 수 있도록 개체 내부 상태를 캡처하고 외부화합니다.)
+
+>[wiki]
+>메멘토 패턴(memento pattern)은 객체를 이전 상태로 되돌릴 수 있는 기능을 제공하는 소프트웨어 디자인 패턴이다. (롤백을 통한 실행 취소) 
+
+**7. Observer(옵저버패턴)**
 
 Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
 
-**8. State**
+(하나의 개체가 상태를 변경하면 모든 종속 항목에 알림이 전송되고 자동으로 업데이트되도록 개체간에 일대 다 종속성을 정의합니다.)
+
+>[wiki]
+>옵서버 패턴은 객체의 상태 변화를 관찰하는 관찰자들, 즉 옵저버들의 목록을 객체에 등록하여 상태 변화가 있을 때마다 메서드 등을 통해 객체가 직접 목록의 각 옵저버에게 통지하도록 하는 디자인 패턴이다. 주로 분산 이벤트 핸들링 시스템을 구현하는 데 사용된다.
+
+**8. State(상태패턴)**
 
 Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
 
-**9. Strategy**
+(내부 상태가 변경 될 때 개체가 동작을 변경할 수 있도록합니다. 개체가 클래스를 변경하는 것처럼 보입니다.)
+
+**9. Strategy(전략 패턴)**
 
 Defines a family of algorithms, encapsulates each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients who use it.
+
+(알고리즘 제품군을 정의하고 각 알고리즘을 캡슐화 한 다음 상호 교환 가능하게 만듭니다. 전략을 사용하면 알고리즘이이를 사용하는 클라이언트와 독립적으로 달라질 수 있습니다.)
 
 **10. Template Method**
 
