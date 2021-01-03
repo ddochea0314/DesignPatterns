@@ -104,43 +104,68 @@ Separate the construction of a complex object from its representation so that th
 
 (복잡한 객체의 구성을 표현에서 분리하여 동일한 구성 프로세스가 다른 표현을 만들 수 있도록합니다.)
 
-**14. Factory Method**
+**14. Factory Method(팩토리메소드패턴)**
 
 Define an interface for creating an object, but let the subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
 
-**15. Prototype**
+(개체를 만들기위한 인터페이스를 정의하되 인스턴스화 할 클래스를 하위 클래스가 결정하도록합니다. 팩토리 메서드를 사용하면 클래스가 하위 클래스에 대한 인스턴스화를 연기 할 수 있습니다.)
+
+>[wiki]
+>부모 클래스에 알려지지 않은 구체 클래스를 생성하는 패턴이며. 자식 클래스가 어떤 객체를 생성할지를 결정하도록 하는 패턴이기도 하다. 부모 클래스 코드에 구체 클래스 이름을 감추기 위한 방법으로도 사용한다.
+
+**15. Prototype(프로토타입)**
 
 Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
 
-**16. Singleton**
+(프로토 타입 인스턴스를 사용하여 만들 개체의 종류를 지정하고이 프로토 타입을 복사하여 새 개체를 만듭니다.)
+
+**16. Singleton(싱글톤)**
 
 Ensure a class only has one instance, and provide a global point of access to it.
 
-## Structural
+(클래스에 인스턴스가 하나만 있는지 확인하고 이에 대한 전역 액세스 지점을 제공합니다.)
 
-**17. Adapter**
+
+## Structural(구조적 패턴)
+
+**17. Adapter(어댑터 패턴)**
 
 Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatibility interfaces.
 
-**18. Bridge**
+(클래스의 인터페이스를 클라이언트가 기대하는 다른 인터페이스로 변환합니다. 어댑터를 사용하면 비 호환성 인터페이스로 인해 다른 방식으로는 불가능했던 클래스가 함께 작동 할 수 있습니다.)
+
+**18. Bridge(브릿지 패턴)**
 
 Decouple an abstraction from its implementation so that the two can vary independently.
 
-**19. Composite**
+(구현에서 추상화를 분리하여 둘이 독립적으로 변할 수 있도록합니다.)
+
+**19. Composite (합성 패턴)**
 
 Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 
-**20. Decorator**
+(개체를 트리 구조로 구성하여 부분 전체 계층을 나타냅니다. Composite를 사용하면 클라이언트가 개별 개체와 개체 구성을 균일하게 처리 할 수 있습니다.)
+
+**20. Decorator(데코레이터 패턴)**
 
 Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
 
-**21. Facade**
+(객체에 동적으로 추가 책임을 연결합니다. 데코레이터는 기능 확장을 위해 서브 클래 싱에 대한 유연한 대안을 제공합니다.)
+
+**21. Facade(퍼사드 패턴)**
 
 Provide a unified interface to a set of interfaces in a system. Facade defines a higher-level interface that makes the subsystem easier to use.
 
-**22. Flyweight**
+(시스템의 인터페이스 세트에 통합 인터페이스를 제공합니다. Facade는 서브 시스템을 더 쉽게 사용할 수 있도록하는 상위 레벨 인터페이스를 정의합니다.)
+
+**22. Flyweight(플라이웨이트 패턴)**
 
 Use sharing to support large numbers of fine-grained objects efficiently. A flyweight is a shared object that can be used in multiple contexts simultaneously. The flyweight acts as an independent object in each context. It is indistinguishable from an instance of the object that is not shared.
+
+(공유를 사용하여 많은 수의 세분화 된 개체를 효율적으로 지원합니다. 플라이 웨이트는 여러 컨텍스트에서 동시에 사용할 수있는 공유 객체입니다. 플라이 웨이트는 각 컨텍스트에서 독립적 인 개체 역할을합니다. 공유되지 않는 개체의 인스턴스와 구별 할 수 없습니다.)
+
+[wiki]
+플라이웨이트 패턴(Flyweight pattern)는 동일하거나 유사한 객체들 사이에 가능한 많은 데이터를 서로 공유하여 사용하도록 하여 메모리 사용량을 최소화하는 소프트웨어 디자인 패턴이다. 종종 오브젝트의 일부 상태 정보는 공유될 수 있는데, 플라이웨이트 패턴에서는 이와 같은 상태 정보를 외부 자료 구조에 저장하여 플라이웨이트 오브젝트가 잠깐 동안 사용할 수 있도록 전달한다.
 
 **23. Proxy**
 
